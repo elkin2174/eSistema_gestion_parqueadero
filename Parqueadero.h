@@ -15,9 +15,11 @@ class Parqueadero{
     string nombre;
     string nit;
     string direccion;
-    vector<Automovil*> automoviles;
-    vector<Motocicleta*> motocicletas;
+    vector<Veiculo*> automoviles;
+    vector<Veiculo*> motocicletas;
+    vector<Persona*> clientes;
     vector<Recibo*> recibos;
+
   public:
     Parqueadero() : nombre(""), nit(""), direccion(""){};
     Parqueadero(string _nombre, string _nit,string _direccion) : nombre(_nombre), nit(_nit), direccion(_direccion){};
@@ -36,9 +38,11 @@ class Parqueadero{
     void imprimirCantidad();
     void imprimirInforme();
     void generarRecibo();
-    void addAutomovil(Automovil *a);
-    void addMotocicleta(Motocicleta *m);
-    void addCliente(Cliente *c);
+    void addAutomovil(Veiculo* a);
+    void addMotocicleta(Veiculo* m);
+    void addCliente(Persona* c);
+    void imprimirRecaudo();
+    void imprimirMayorTiempo();
 };
 #else
   class Parqueadero;

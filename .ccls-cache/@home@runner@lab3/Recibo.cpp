@@ -52,6 +52,7 @@ Persona* Recibo::getCliente(){
 Veiculo* Recibo::getVeiculo(){
   return this->vehiculo;
 }
+
 void Recibo::imprimirRecibo(){
   string minllegadastring = "";
   string minSalidastring = "";
@@ -68,7 +69,7 @@ void Recibo::imprimirRecibo(){
   cout<<"<-------------Recibo-------------->"<<endl
   <<"Fecha: " << getFecha() <<endl
   << "Hora entrada: " << horaLlegada << ":" <<minllegadastring <<endl
-  << "Hora Salida: " << horaSalida << ":" + minL<<endl
+  << "Hora Salida: " << horaSalida << ":" + minSalidastring<<endl
   << "Tarifa: "<< getTarifa() <<endl;
   cliente->imprimirDatos();
   vehiculo->imprimirDatos();

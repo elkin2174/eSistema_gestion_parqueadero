@@ -52,6 +52,7 @@ Persona* Recibo::getCliente(){
 Veiculo* Recibo::getVeiculo(){
   return this->vehiculo;
 }
+
 void Recibo::imprimirRecibo(){
   string minllegadastring = "";
   string minSalidastring = "";
